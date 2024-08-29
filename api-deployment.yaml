@@ -14,15 +14,15 @@ spec:
         app: patrones-api
     spec:
       containers:
-      - image: pipeba1408/patrones-parcial1-api:1724948475
-        name: patrones-api
-        env:
-        - name: DB_SERVER_IP
-          value: mysql.main.svc.cluster.local.
-        ports:
-        - containerPort: 8080
+        - image: pipeba1408/patrones-parcial1-api:1724973195
           name: patrones-api
-        readinessProbe:
-          httpGet:
-            path: /api/mensajes
-            port: 8080
+          env:
+            - name: DB_SERVER_IP
+              value: mysql.main.svc.cluster.local.
+          ports:
+            - containerPort: 8080
+              name: patrones-api
+          readinessProbe:
+            httpGet:
+              path: /api/mensajes
+              port: 8080
