@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: patrones-api
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/pipe1408/patrones-parcial1-manifests.git
+    path: "."
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: main
