@@ -14,7 +14,7 @@ spec:
         app: patrones-api
     spec:
       containers:
-        - image: pipeba1408/patrones-parcial1-api:1724976868
+        - image: pipeba1408/patrones-parcial1-api:1725549873
           name: patrones-api
           env:
             - name: DB_SERVER_IP
