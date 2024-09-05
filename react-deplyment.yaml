@@ -17,7 +17,7 @@ spec:
         app: patrones-react
     spec:
       containers:
-      - image: sebaspicas/parcial1patronesfront:3.0.0
+      - image: pipeba1408/patrones-react:050924
         name: patrones-react
         ports:
         - containerPort: 3000
